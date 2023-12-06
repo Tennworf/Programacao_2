@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    <title>Cadastro de Estudantes</title>
+</head>
+
+<body>
+    <div class="page-container">
+        <div class="centered-content">
+            <h1>Cadastro de Estudantes</h1>
+            <form>
+                <label for="matricula">Matrícula:</label>
+                <input type="text" id="matricula" name="matricula">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome">
+                <label for="email">E-mail:</label>
+                <input type="text" id="email" name="email">
+                <button id="botao">botao</button>
+            </form>
+        </div>
+        <!-- Botões no canto inferior direito -->
+        <div class="corner-buttons">
+            <input type="button" value="Voltar" onclick="history.back()">
+            <input type="button" value="Sair" onclick="window.location.href='sair.html'">
+        </div>
+    </div>
+
+    <div class="page-container">
+        <div class="centered-content">
+            <h1>Informações dos Estudantes</h1>
+            <table id="tabelaAlunos" border="1">
+                <tr>
+                    <th>Matrícula</th>
+                    <th>Nome</th>
+                    <th>E-mail</th>
+                </tr>
+            </table>
+        </div>
+        <!-- Botões no canto inferior direito -->
+        <div class="corner-buttons">
+            <a href="Disciplina_Estudante.html"><input type="button" value="Voltar"></a>
+            <a href="Login.html"><input type="button" value="Sair"></a>
+        </div>
+    </div>
+    <script type="module" src="../ServidorEscola.js"></script>
+    <script type="module" src="../funCadastro.js"></script>
+</body>
+
+</html>
