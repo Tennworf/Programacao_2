@@ -1,0 +1,20 @@
+/*Função senha
+
+function validarSenha(senha) {
+  // Pelo menos 8 caracteres, uma letra maiúscula e um símbolo
+  const regex = /^(?=.*[A-Z])(?=.*[\W_]).{8,}$/;
+
+  if (regex.test(senha)) {
+    console.log("Senha válida!");
+  } else {
+    console.error("Senha inválida!");
+  }
+}
+
+// Exemplos de chamadas da função
+validarSenha("Senha123");      // Senha válida
+validarSenha("senhafraca");    // Senha inválida (sem maiúsculas)
+validarSenha("SenhasemS1mbolo"); // Senha inválida (sem símbolos)*/
+
+
+

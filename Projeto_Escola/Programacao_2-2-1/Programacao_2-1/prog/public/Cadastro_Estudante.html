@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    <title>Cadastro de Estudantes</title>
+</head>
+
+<body>
+    <div class="page-container">
+        <div class="centered-content">
+            <h1>Cadastro de Estudantes</h1>
+            <form id="Estudante">
+                <label for="matricula">Matrícula:</label>
+                <input type="number" id="matricula" name="matricula" placeholder="Numero da matricula" required>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Nome do Estudante" required>
+                <label for="email">E-mail:</label>
+                <input type="text" id="email" name="email" placeholder="Informe o e-meil" required>
+            </form>
+            <button class="corner-button" id="button1">Cadastrar</button>
+            <button class="corner-button" id="button2">Alterar</button>
+            <button class="corner-button" id="button3">Excluir</button>
+        </div>
+    </div>
+
+    <div class="page-container">
+        <div class="centered-content">
+            <h1>Informações dos Estudantes</h1>
+        
+            <div class="container-1">
+                <p class="box">Matricula</p>
+                <p class="box">Nome</p>
+                <p class="box">E-mail</p>
+                <!-- Adicione mais parágrafos conforme necessário -->
+            </div>
+        
+            <div class="table-container">
+                <table class="table" id="tabelaAlunos">
+                    <!-- Dados da tabela aqui -->
+                </table>
+            </div>
+        </div>
+        <!-- Botões no canto inferior direito -->
+        <div class="corner-buttons">
+            <a href="Cadastro.html" class="corner-button">Voltar</a>
+            <a href="Login.html" class="corner-button">Sair</a>
+        </div>
+    </div>
+    <script type="module" src="../ServidorEscola.js"></script>
+    <script type="module" src="../funCadastroEstudantes.js"></script>
+</body>
+
+</html>

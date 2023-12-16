@@ -1,0 +1,231 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*background: linear-gradient(to right, #5956e9, #a963f8);*/
+    background-image: url(../images/image.jpg.jfif);
+    background-size: cover;
+    /* Garante que a imagem cubra todo o corpo */
+    background-position: center;
+    /* Centraliza a imagem no corpo */
+    background-repeat: no-repeat;
+    /* Evita a repetição da imagem */
+    height: 100vh;
+    /* Garante que o corpo tenha pelo menos a altura da tela */
+    margin: 0;
+    /* Remove a margem padrão do corpo */
+}
+
+.page-container,
+.page-container-cadastro {
+    overflow: auto; /* Adiciona barras de rolagem quando necessário */
+}
+
+.table-container,
+.container-1 {
+    overflow: hidden; /* Mantém o conteúdo dentro das dimensões, sem barras de rolagem */
+}
+
+.page-container {
+    
+    background-color: whitesmoke;
+    padding: 10px;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 0 darkgrey;
+    margin: 20px;
+    overflow: auto; /* Adiciona barras de rolagem quando necessário */
+}
+
+.page-container-cadastro {
+    background-color: whitesmoke;
+    padding: 10px;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 0 darkgrey;
+    margin: 20px;
+}
+
+.centered-content {
+    text-align: center;
+    margin-top: 20px;
+}
+
+h1 {
+    color: #660fc8;
+    font-family: 'Poppins', sans-serif;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    font-size: 20px;
+    margin-top: 10px;
+    display: block;
+}
+
+input {
+    border: none;
+    margin-top: 5px;
+    border-radius: 60px;
+    padding: 15px 50px;
+    outline: none;
+    width: 80%;
+    text-align: center;
+}
+
+#button1 {
+    margin-top: 40px;
+}
+
+table {
+    margin-top: 20px;
+    width: 100%;
+    border: none !important;
+    text-align: center;
+    overflow: auto;
+    font-size: 20PX;
+    /* Adiciona barra de rolagem quando necessário */
+}
+
+th,
+td {
+    border: solid 2px black;
+    padding: 12px;
+    background-color: #660fc8, 0.7;
+    color: rgb(0, 0, 0);
+    max-width: 150px;
+    /* Defina a largura máxima da célula */
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    /* Adiciona pontos de suspensão (...) se o texto estiver cortado */
+}
+
+th {
+    font-weight: normal;
+}
+
+.corner-buttons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.corner-button {
+    background: #660fc8;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 8px 25px;
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 0px;
+    font-style: normal;
+}
+
+.corner-button-1 {
+    background: #660fc8;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 8px 25px;
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    font-style: normal;
+    margin-top: 20px;
+}
+
+.table-container {
+    max-height: 270px;
+    /* Ajuste conforme necessário */
+    overflow-y: auto;
+    margin-top: 1px;
+    /* Ajuste conforme necessário */
+}
+
+.column-header {
+    font-weight: normal;
+    /* Remover negrito dos cabeçalhos se necessário */
+    margin: 0;
+}
+
+/* mexe nos <p>*/
+
+.container-1 {
+    display: flex;
+    flex-direction: row;
+    /* Ajusta a direção para linha (padrão é 'row') */
+}
+
+.box {
+    padding: 20px;
+    margin: 30px;
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+}
+
+a {
+    background: #660fc8;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 8px 25px;
+    font-size: 18px;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+/* Estilos para o alerta */
+.alert {
+    padding: 15px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    margin: 20px;
+    position: relative;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 20px;
+    background-color: #ff9800; /* Laranja */
+}
+
+i {
+    background-image: url('../images/lapis\ \(1\).png');
+    background-image: url('../images/circulo-cruzado.png');
+    width: 30px;
+    height: 30px;
+}
