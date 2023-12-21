@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    <title>Cadastro de Disciplinas</title>
+</head>
+
+<body>
+    <div class="page-container">
+        <div class="centered-content">
+            <h1>Disciplinas</h1>
+            <form>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nomedisc" name="nome"  placeholder="Nome da disciplina" required><br>
+
+                <label for="professor">Professor:</label>
+                <input type="text" id="professor" name="professor" placeholder="Nome professor" required><br>
+
+                <label for="valor">Valor:</label>
+                <input type="number" id="valor" name="valor" placeholder="Informe o valor da matria" required><br>
+
+                <label for="percentual">Percentual para aprovação:</label>
+                <input type="number" id="percentual" name="percentual" placeholder="Informe o percentual de aprovação" required><br>
+
+            </form>
+            <button class="corner-button-1" id="button4">Cadastrar</button>
+            <button class="corner-button-1" id="button5">Alterar</button>
+            <button class="corner-button-1" id="button6">Excluir</button>
+        </div>
+    </div>
+
+    <div class="page-container">
+        <div class="centered-content">
+            <h1>Informações dos Estudantes</h1>
+
+            <div class="container-1">
+                <p class="box">Nome Disciplina</p>
+                <p class="box">Professor</p>
+                <p class="box">Valor</p>
+                <p class="box">%</p>
+                <!-- Adicione mais parágrafos conforme necessário -->
+            </div>
+
+            <div class="table-container">
+                <table class="table" id="tabelaDisciplinas">
+                    <!-- Dados da tabela aqui -->
+                </table>
+            </div>
+            <!-- Botões no canto inferior direito -->
+            <div class="corner-buttons">
+                <a href="Cadastro.html" class="corner-button">Voltar</a>
+                <a href="Login.html" class="corner-button">Sair</a>
+            </div>
+        </div>
+        <script type="module" src="../ServidorEscola.js"></script>
+        <script type="module" src="../funCadastroDisciplinas.js"></script>
+</body>
+
+</html>

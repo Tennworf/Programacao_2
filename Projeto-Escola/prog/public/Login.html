@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <script src="https://kit.fontawesome.com/cf6fa412bd.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="buttonsForm">
+            <div class="btnColor"></div>
+            <button id="btnSignin">Login</button>
+            <button  id="btnSignup">Cadastrar-se</button>
+        </div>
+
+        <form id="signin">
+            <input name="email" id="email" type="email" placeholder="Email" required />
+            <i class="fas fa-envelope iEmail"></i>
+            <input name="password" id="Password" type="password" placeholder="Password" required />
+            <i class="fas fa-lock iPassword"></i>
+            <div class="divCheck">
+                <input name="checkbox" id="checkbox" type="checkbox" />
+                <span>Remember Password</span>
+            </div>
+            <button id="button" onclick="irTelaCadastro()" type="submit">Entrar</button>
+        </form>
+
+        <form id="signup">
+            <input name="mail" id="mail" type="email" placeholder="Email" required />
+            <i class="fas fa-envelope iEmail"></i>
+            <input name="senha" id="senha" type="password" placeholder="Password" required />
+            <i class="fas fa-lock iPassword"></i>
+            <input name="password1" id="password1" type="password" placeholder="Password" required />
+            <i class="fas fa-lock iPassword2"></i>
+            <div class="divCheck">
+                <input type="checkbox" required />
+                <span>Terms</span>
+            </div>
+            <button id="button2" type="submit">Cadastrar</button>
+        </form>
+    </div>
+    <script src="Index.js"></script>
+    <script type="module" src="../ServidorEscola.js"></script>
+    <script type="module" src="../funLoginCadastro.js"></script>
+</body>
+
+</html>
