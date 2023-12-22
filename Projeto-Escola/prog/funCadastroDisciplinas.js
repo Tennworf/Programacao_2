@@ -11,8 +11,7 @@ let tabelaDisciplinas = document.getElementById('tabelaDisciplinas')
 
 button4.addEventListener('click', function () {
     if (nomedisc.value != '' && professor.value != '' && valor.value != '' && percentual.value != '') {
-        addDisciplinas(nomedisc.value, professor.value, valor.value, percentual.value)
-        buscaDisciplinas()
+        addDisciplinas(nomedisc.value, professor.value, valor.value, percentual.value).then(buscaDisciplinas)
     } else {
         alert('Preencha os campos a baixo')
     }
@@ -21,19 +20,15 @@ button4.addEventListener('click', function () {
 
 button5.addEventListener('click', async function () {
     console.log('botao')
-     if (nomedisc.value != '' && professor.value != '' && valor.value != '' && percentual.value != '') {
-        Update1(nomedisc.value, { nomedisc: nomedisc.value, professor: professor.value, valor: valor.value, percentual: percentual.value })
-        buscaDisciplinas()
-            .then(() => reloadPage());
-      }   
+    if (nomedisc.value != '' && professor.value != '' && valor.value != '' && percentual.value != '') {
+        Update1(nomedisc.value, { nomedisc: nomedisc.value, professor: professor.value, valor: valor.value, percentual: percentual.value }).then(buscaDisciplinas)
+    }
 })
 
 button6.addEventListener('click', function () {
     console.log('botao')
     if (nomedisc.value != '' && professor.value != '' && valor.value != '' && percentual.value != '') {
-        Remove1(nomedisc.value)
-        buscaDisciplinas()
-            .then(() => reloadPage());
+        Remove1(nomedisc.value).then(buscaDisciplinas)
     }
 })
 

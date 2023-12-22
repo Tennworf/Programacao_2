@@ -20,7 +20,7 @@ const disciplinaRef = ref(bancodados, 'Disciplinas')
 
 /*Função Estudantes*/
 
-export function addEstudantes(matricula, nome, email) {
+export async function addEstudantes(matricula, nome, email) {
   push(ref(bancodados, 'Estudantes/'), {
     matricula: matricula, nome: nome, email: email
   })
@@ -47,7 +47,7 @@ export async function getEstudates() {
 
 /*Função Disciplinas*/
 
-export function addDisciplinas(nomedisc, professor, valor, percentual) {
+export async function addDisciplinas(nomedisc, professor, valor, percentual) {
   push(ref(bancodados, 'Disciplinas/'), {
     nomedisc: nomedisc, professor: professor, valor: valor, percentual: percentual
   })
@@ -128,10 +128,9 @@ export function getIdEstudantes(mat) {
 
 /*  Função Alterar   */
 
-export function Update(matricula, novosDados) {
-  getIdEstudantes(matricula).then((EstudantesRef) => {
-    set(EstudantesRef, novosDados)
-  })
+export async function Update(matricula, novosDados) {
+  const id = await getIdEstudantes(matricula)
+  await set(id, novosDados)
 }
 
 
@@ -139,10 +138,9 @@ export function Update(matricula, novosDados) {
 /*  Função Alterar    */
 
 
-export function Remove(matricula) {
-  getIdEstudantes(matricula).then((EstudantesRef) => {
-    remove(EstudantesRef)
-  })
+export async function Remove(matricula) {
+  const id = await getIdEstudantes(matricula)
+  await remove(id)
 }
 
 
@@ -188,19 +186,17 @@ export function getIdDisciplinas(mat) {
 
 /*  Função Alterar   */
 
-export function Update1(disciplina, novosDados) {
-  getIdDisciplinas(disciplina).then((disciplinaRef) => {
-    set(disciplinaRef, novosDados)
-  })
-}
+export async function Update1(disciplina, novosDados) {
+  const nome = await getIdDisciplinas(disciplina)
+  await set(nome, novosDados)
+  }
 
 
 
 /*  Função Alterar   */
 
 
-export function Remove1(disciplina) {
-  getIdDisciplinas(disciplina).then((disciplinaRef) => {
-    remove(disciplinaRef)
-  })
-}
+export async function Remove1(disciplina) {
+  const nome = await getIdDisciplinas(disciplina)
+  await remove(nome)
+  }
